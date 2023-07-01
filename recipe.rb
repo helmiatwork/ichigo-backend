@@ -32,7 +32,7 @@ class Recipe
   end
 
   def self.recipe_names
-    @@recipes.map(&:name)
+    @@recipes.map(&:name) #get all stored recipe names
   end
 
   def self.describe(&block)
