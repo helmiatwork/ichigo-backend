@@ -47,6 +47,10 @@ describe Recipe do
       expect(soup_recipe.name).to eq 'Miso Soup'
       expect(soup_recipe.ingredients).to eq ['Tofu', 'White miso paste']
       expect(soup_recipe.method_steps).to eq ['Mix miso paste into boiling water', 'Add tofu and serve']
+
+      #make sure if the class save every recipe
+      recipe_names = described_class.recipe_names
+      expect(recipe_names).to contain_exactly('Pancake', 'Miso Soup')
     end
   end
 

@@ -31,6 +31,10 @@ class Recipe
     @@recipes.find{|receipt| receipt.name == name}
   end
 
+  def self.recipe_names
+    @@recipes.map(&:name)
+  end
+
   def self.describe(&block)
     instance_eval(&block) #execute provided block of code
   end
